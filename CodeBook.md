@@ -3,122 +3,125 @@ Code Book
 Section I: Input 
 Original source of the data: 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
 Detail description about the original data collected:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
 Information about the Original Data Set
 The experiments have been carried out with a group of 30 volunteers.   Each person performed six activities (see Activity Label table below) wearing a smartphone on the waist.  The dataset has been randomly partitioned into two sets, for generating the training data and  the test data. 
 
 Section II: Transformations
-ìAnalysis_run. Rî is developed to performed the following data transformation requirements:
-1.	Merges the training and the test sets to create one data set.
-2.	Extracts only the measurements on the mean and standard deviation for each measurement.
-3.	Uses descriptive activity names to name the activities in the data set
-4.	Appropriately labels the data set with descriptive variable names.
-        	Removed ì()î, ì,î,î-ì from variable names
-		Applied case consistency with ìMeanî and ìStdî 
-		Modified  typo of ìbodybodyî to ìbodyî only
-		Replaced f as freq, t as time
+‚ÄúAnalysis_run. R‚Äù is developed to performed the following data transformation requirements:
+	- Merges the training and the test sets to create one data set.
+	- Extracts only the measurements on the mean and standard deviation for each measurement.
+	- Uses descriptive activity names to name the activities in the data set
+	- Appropriately labels the data set with descriptive variable names.
+        	- Removed ‚Äú()‚Äù, ‚Äú,‚Äù,‚Äù-‚Äú from variable names
+		- Applied case consistency with ‚ÄúMean‚Äù and ‚ÄúStd‚Äù 
+		- Modified  typo of ‚Äúbodybody‚Äù to ‚Äúbody‚Äù only
+		- Replaced f as freq, t as time
 
-5.	From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+	- From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 Section III:  Output 
-Output  file ñ Tidy.txt
-Identifiers for the Tidy.txt
-ï	Activity ñ Physical activity 
-ï	Subject ñ person involved in the experiment
+Output  file ‚Äì Tidy.txt
+
+Identifiers for the Tidy.txt:
+	- Activity ‚Äì Physical activity 
+	- Subject ‚Äì person involved in the experiment
 Activity Labels
-1.	WALKING
-2.	WALKING_UPSTAIRS
-3.	WALKING_DOWNSTAIRS
-4.	SITTING
-5.	STANDING
-6.	LAYING
+	- 1.	WALKING
+	- 2.	WALKING_UPSTAIRS
+	- 3.	WALKING_DOWNSTAIRS
+	- 4.	SITTING
+	- 5.	STANDING
+	- 6.	LAYING
 
 Variable Names:  
-ï	timeBodyAccMeanX               
-ï	timeBodyAccMeanY                
-ï	timeBodyAccMeanZ                 
-ï	timeBodyAccStdX                 
-ï	timeBodyAccStdY 
-ï	timeBodyAccStdZ               
-ï	timeGravityAccMeanX 
-ï	timeGravityAccMeanY             
-ï	timeGravityAccMeanZ 
-ï	timeGravityAccStdX              
-ï	timeGravityAccStdY               
-ï	timeGravityAccStdZ              
-ï	timeBodyAccJerkMeanX             
-ï	timeBodyAccJerkMeanY            
-ï	timeBodyAccJerkMeanZ             
-ï	timeBodyAccJerkStdX             
-ï	timeBodyAccJerkStdY              
-ï	timeBodyAccJerkStdZ             
-ï	timeBodyGyroMeanX                
-ï	timeBodyGyroMeanY               
-ï	timeBodyGyroMeanZ                
-ï	timeBodyGyroStdX                
-ï	timeBodyGyroStdY                 
-ï	timeBodyGyroStdZ                
-ï	timeBodyGyroJerkMeanX            
-ï	timeBodyGyroJerkMeanY           
-ï	timeBodyGyroJerkMeanZ            
-ï	timeBodyGyroJerkStdX            
-ï	timeBodyGyroJerkStdY             
-ï	timeBodyGyroJerkStdZ            
-ï	timeBodyAccMagMean                
-ï	timeBodyAccMagStd                
-ï	timeGravityAccMagMean             
-ï	timeGravityAccMagStd             
-ï	timeBodyAccJerkMagMean            
-ï	timeBodyAccJerkMagStd            
-ï	timeBodyGyroMagMean               
-ï	timeBodyGyroMagStd               
-ï	timeBodyGyroJerkMagMean           
-ï	timeBodyGyroJerkMagStd           
-ï	freqBodyAccMeanX                 
-ï	freqBodyAccMeanY                
-ï	freqBodyAccMeanZ                 
-ï	freqBodyAccStdX                 
-ï	freqBodyAccStdY                  
-ï	freqBodyAccStdZ                 
-ï	freqBodyAccMeanFreqX             
-ï	freqBodyAccMeanFreqY            
-ï	freqBodyAccMeanFreqZ             
-ï	freqBodyAccJerkMeanX            
-ï	freqBodyAccJerkMeanY             
-ï	freqBodyAccJerkMeanZ            
-ï	freqBodyAccJerkStdX              
-ï	freqBodyAccJerkStdY             
-ï	freqBodyAccJerkStdZ              
-ï	freqBodyAccJerkMeanFreqX        
-ï	freqBodyAccJerkMeanFreqY         
-ï	freqBodyAccJerkMeanFreqZ        
-ï	freqBodyGyroMeanX                
-ï	freqBodyGyroMeanY               
-ï	freqBodyGyroMeanZ                
-ï	freqBodyGyroStdX                
-ï	freqBodyGyroStdY                 
-ï	freqBodyGyroStdZ                
-ï	freqBodyGyroMeanFreqX            
-ï	freqBodyGyroMeanFreqY           
-ï	freqBodyGyroMeanFreqZ            
-ï	freqBodyAccMagMean               
-ï	freqBodyAccMagStd                 
-ï	freqBodyAccMagMeanFreq           
-ï	freqBodyAccJerkMagMean            
-ï	freqBodyAccJerkMagStd            
-ï	freqBodyAccJerkMagMeanFreq        
-ï	freqBodyGyroMagMean              
-ï	freqBodyGyroMagStd                
-ï	freqBodyGyroMagMeanFreq          
-ï	freqBodyGyroJerkMagMean           
-ï	freqBodyGyroJerkMagStd           
-ï	freqBodyGyroJerkMagMeanFreq       
-ï	angletBodyAccMeangravity         
-ï	angletBodyAccJerkMeangravityMean  
-ï	angletBodyGyroMeangravityMean    
-ï	angletBodyGyroJerkMeangravityMean 
-ï	angleXgravityMean                
-ï	angleYgravityMean                 
-ï	angleZgravityMean 
+‚Ä¢	timeBodyAccMeanX               
+‚Ä¢	timeBodyAccMeanY                
+‚Ä¢	timeBodyAccMeanZ                 
+‚Ä¢	timeBodyAccStdX                 
+‚Ä¢	timeBodyAccStdY 
+‚Ä¢	timeBodyAccStdZ               
+‚Ä¢	timeGravityAccMeanX 
+‚Ä¢	timeGravityAccMeanY             
+‚Ä¢	timeGravityAccMeanZ 
+‚Ä¢	timeGravityAccStdX              
+‚Ä¢	timeGravityAccStdY               
+‚Ä¢	timeGravityAccStdZ              
+‚Ä¢	timeBodyAccJerkMeanX             
+‚Ä¢	timeBodyAccJerkMeanY            
+‚Ä¢	timeBodyAccJerkMeanZ             
+‚Ä¢	timeBodyAccJerkStdX             
+‚Ä¢	timeBodyAccJerkStdY              
+‚Ä¢	timeBodyAccJerkStdZ             
+‚Ä¢	timeBodyGyroMeanX                
+‚Ä¢	timeBodyGyroMeanY               
+‚Ä¢	timeBodyGyroMeanZ                
+‚Ä¢	timeBodyGyroStdX                
+‚Ä¢	timeBodyGyroStdY                 
+‚Ä¢	timeBodyGyroStdZ                
+‚Ä¢	timeBodyGyroJerkMeanX            
+‚Ä¢	timeBodyGyroJerkMeanY           
+‚Ä¢	timeBodyGyroJerkMeanZ            
+‚Ä¢	timeBodyGyroJerkStdX            
+‚Ä¢	timeBodyGyroJerkStdY             
+‚Ä¢	timeBodyGyroJerkStdZ            
+‚Ä¢	timeBodyAccMagMean                
+‚Ä¢	timeBodyAccMagStd                
+‚Ä¢	timeGravityAccMagMean             
+‚Ä¢	timeGravityAccMagStd             
+‚Ä¢	timeBodyAccJerkMagMean            
+‚Ä¢	timeBodyAccJerkMagStd            
+‚Ä¢	timeBodyGyroMagMean               
+‚Ä¢	timeBodyGyroMagStd               
+‚Ä¢	timeBodyGyroJerkMagMean           
+‚Ä¢	timeBodyGyroJerkMagStd           
+‚Ä¢	freqBodyAccMeanX                 
+‚Ä¢	freqBodyAccMeanY                
+‚Ä¢	freqBodyAccMeanZ                 
+‚Ä¢	freqBodyAccStdX                 
+‚Ä¢	freqBodyAccStdY                  
+‚Ä¢	freqBodyAccStdZ                 
+‚Ä¢	freqBodyAccMeanFreqX             
+‚Ä¢	freqBodyAccMeanFreqY            
+‚Ä¢	freqBodyAccMeanFreqZ             
+‚Ä¢	freqBodyAccJerkMeanX            
+‚Ä¢	freqBodyAccJerkMeanY             
+‚Ä¢	freqBodyAccJerkMeanZ            
+‚Ä¢	freqBodyAccJerkStdX              
+‚Ä¢	freqBodyAccJerkStdY             
+‚Ä¢	freqBodyAccJerkStdZ              
+‚Ä¢	freqBodyAccJerkMeanFreqX        
+‚Ä¢	freqBodyAccJerkMeanFreqY         
+‚Ä¢	freqBodyAccJerkMeanFreqZ        
+‚Ä¢	freqBodyGyroMeanX                
+‚Ä¢	freqBodyGyroMeanY               
+‚Ä¢	freqBodyGyroMeanZ                
+‚Ä¢	freqBodyGyroStdX                
+‚Ä¢	freqBodyGyroStdY                 
+‚Ä¢	freqBodyGyroStdZ                
+‚Ä¢	freqBodyGyroMeanFreqX            
+‚Ä¢	freqBodyGyroMeanFreqY           
+‚Ä¢	freqBodyGyroMeanFreqZ            
+‚Ä¢	freqBodyAccMagMean               
+‚Ä¢	freqBodyAccMagStd                 
+‚Ä¢	freqBodyAccMagMeanFreq           
+‚Ä¢	freqBodyAccJerkMagMean            
+‚Ä¢	freqBodyAccJerkMagStd            
+‚Ä¢	freqBodyAccJerkMagMeanFreq        
+‚Ä¢	freqBodyGyroMagMean              
+‚Ä¢	freqBodyGyroMagStd                
+‚Ä¢	freqBodyGyroMagMeanFreq          
+‚Ä¢	freqBodyGyroJerkMagMean           
+‚Ä¢	freqBodyGyroJerkMagStd           
+‚Ä¢	freqBodyGyroJerkMagMeanFreq       
+‚Ä¢	angletBodyAccMeangravity         
+‚Ä¢	angletBodyAccJerkMeangravityMean  
+‚Ä¢	angletBodyGyroMeangravityMean    
+‚Ä¢	angletBodyGyroJerkMeangravityMean 
+‚Ä¢	angleXgravityMean                
+‚Ä¢	angleYgravityMean                 
+‚Ä¢	angleZgravityMean 
 
