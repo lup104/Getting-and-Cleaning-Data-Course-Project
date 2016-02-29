@@ -21,8 +21,7 @@ Section II: Transformations
 		- Applied case consistency with “Mean” and “Std”. 
 		- Modified  typo of “bodybody” to “body” only.
 		- Replaced f as freq, t as time.
-
-	- From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+	-Creates an independent tidy data set with the average of each variable for each activity and each subject.
 
 Section III:  Output 
 Output  file – Tidy.txt
