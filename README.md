@@ -1,8 +1,13 @@
 The input data downloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip is about the experiments have been carried out with a group of 30 volunteer. Each person performed six activities wearing a smartphone. Using its embedded accelerometer and gyroscope, the 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz are recorded. The obtained dataset has been partitioned into two sets, the training data and the test data.
 
-For each record in the dataset, the following info are collected An identifier of the subject who carried out the experiment. The activity label. Triaxial Angular velocity from the gyroscope. A 561-feature vector with time and frequency domain variables.
+For each record in the dataset, the following info are collected:
+  An identifier of the subject who carried out the experiment. 
+  The activity label. 
+  Triaxial Angular velocity from the gyroscope. 
+  A 561-feature vector with time and frequency domain variables.
 
 The purpose of the project is to demonstrate how to collect, work with, and clean a data set. 
+
 The R script “run_analysis.R” is created to perform the following tasks: 
   Merges the training and the test sets to create one data set. 
   Extracts only the measurements on the mean and standard deviation for each measurement. 
